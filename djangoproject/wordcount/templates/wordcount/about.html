@@ -1,0 +1,11 @@
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'wordcount/css/layout.css' %}">
+</head>
+<h1 class="title">ABOUT</h1>
+<div id="cont">
+<p>이곳은 글자를 세 주는 숩니의 워드카운트 웹페이지 입니다. 여기서 글자를 세보세요.</p>
+
+<a href="{% url 'home' %}">Home으로 돌아가기</a>
+</div>

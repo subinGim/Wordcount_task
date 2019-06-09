@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'wordcount/css/layout.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<h1 class="title">RESULT</h1>
+
+<div id="cont">
+<h2>입력한 텍스트는 {{total}}개로 구성되어 있습니다.</h2>
+<br>
+<h2>입력한 텍스트: {{full}}</h2><br>
+
+<h2>단어 카운트 결과</h2>
+<table style="border: solid 4px gray;">
+    <tr>
+        <th>단어</th><th>개수</th>
+    </tr>
+    {% for word, value in dict %} <!--딕셔너리는 한 회에 두개의 값이 나오니까 변수도 두 개가 필요함-->
+    <tr>
+        <td>{{word}}</td><td>{{value}}개</td>
+    </tr>
+    {% endfor %}
+    
+</table>
+<br>
+<a class="btn btn-primary " href="{% url 'home' %}">다시 하기</a><br><br>
+</div>

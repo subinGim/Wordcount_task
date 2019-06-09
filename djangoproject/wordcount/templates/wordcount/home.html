@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'wordcount/css/layout.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<h1 class="title">WORD COUNTING</h1>
+
+<div id="cont">
+<a href="{% url 'about' %}">ABOUT</a>
+
+<form action="{% url 'result' %}">
+<!-- <form method="POST">{% csrf_token%} -->
+    <textarea cols="50" rows="20"  name="fulltext"></textarea>
+    <br>
+    {{form.as_table}}
+    <input class="btn btn-primary" type="submit" value="COUNT">
+    
+</form>
+</div>

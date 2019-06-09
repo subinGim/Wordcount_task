@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Jua');
+
+.title{
+    width: 960px;
+    height: 200px;
+    font-size: 40pt;
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+    padding-top: 50px;
+	margin: 0 auto;
+}
+
+#cont{
+    font-family: 'Jua', sans-serif;
+    font-size: 20pt;
+    text-align: center;
+    margin: auto;
+}
+
+table, td{
+    
+    font-size: 25px;
+    text-align: center;
+}
+
+th{
+    background-color: skyblue;
+}
+
+table{
+    border-style: solid 5px gray;
+    width: 50%;
+    margin: auto;
+}
